@@ -4,10 +4,30 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>isz-$(AssemblyName)</PackageId>
+    <Title>AgentBody</Title>
+    <Authors>ivsaez</Authors>
+    <PackageProjectUrl>https://github.com/ivsaez/AgentBody</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/ivsaez/AgentBody</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="isz-Items" Version="3.0.0" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="isz-Agents" Version="3.1.0" />
+    <PackageReference Include="isz-Items" Version="3.1.0" />
     <PackageReference Include="isz-Saver" Version="2.2.0" />
   </ItemGroup>
 
