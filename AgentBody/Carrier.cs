@@ -20,6 +20,13 @@ namespace AgentBody
             this.weight = weight;
         }
 
+        public Carrieds GetCarrieds<T>(Repository<T> repository)
+            where T : IItem, ISavable, ICloneable =>
+            new Carrieds(
+                leftHand is null ? null : (ITool)repository.GetOne(leftHand),
+                rightHand is null ? null : (ITool)repository.GetOne(rightHand),
+                back is null ? null : (IContainer)repository.GetOne(back));
+
         public BaggingResult Take<T>(IItem item, Repository<T> repository)
             where T : IItem, ISavable, ICloneable
         {
