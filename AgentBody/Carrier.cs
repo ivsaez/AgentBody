@@ -160,6 +160,10 @@ namespace AgentBody
             return item;
         }
 
+        public bool IsEnlighted<T>(Repository<T> repository, bool isEnlightedOutside = false)
+            where T : IItem, ISavable, ICloneable =>
+                GetCarrieds(repository).IsEnlighted(repository, isEnlightedOutside);
+
         private ItemAddition checkAdditionCapabilities<T>(IItem item, Repository<T> repository)
             where T : IItem, ISavable, ICloneable
         {

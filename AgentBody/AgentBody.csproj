@@ -12,7 +12,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/ivsaez/AgentBody</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <Version>1.1.1</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <PackageReference Include="isz-Agents" Version="3.2.0" />
-    <PackageReference Include="isz-Items" Version="3.1.0" />
+    <PackageReference Include="isz-Items" Version="3.2.0" />
     <PackageReference Include="isz-Saver" Version="2.2.0" />
   </ItemGroup>
 

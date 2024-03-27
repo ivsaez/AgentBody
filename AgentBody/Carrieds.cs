@@ -1,4 +1,6 @@
-﻿using Items;
+﻿using Identification;
+using Items;
+using Saver;
 
 namespace AgentBody
 {
@@ -32,6 +34,21 @@ namespace AgentBody
             LeftHand = leftHand;
             RightHand = rightHand;
             Back = back;
+        }
+
+        public bool IsEnlighted<T>(Repository<T> repository, bool isEnlightedOutside = false)
+            where T : IItem, ISavable, ICloneable
+        {
+            if (LeftHand is not null && LeftHand is IEnlighted)
+                return true;
+
+            if (RightHand is not null && RightHand is IEnlighted)
+                return true;
+
+            if(Back is not null && Back.Inventory.IsEnlighted(repository, isEnlightedOutside))
+                return true;
+
+            return false;
         }
     }
 }
